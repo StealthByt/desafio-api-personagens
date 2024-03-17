@@ -1,0 +1,53 @@
+---
+
+# Manual do Usuário - API de Personagens
+
+Bem-vindo ao Manual do Usuário da API de Personagens. Este documento fornecerá instruções básicas sobre como usar a API para gerenciar personagens.
+
+## Visão Geral
+
+A API de Personagens permite listar todos os personagens existentes, bem como criar novos personagens.
+
+## Funcionamento Básico
+
+### Listar Personagens
+
+Para listar todos os personagens, envie uma solicitação GET para a rota `/characters/`.
+
+#### Exemplo:
+
+```
+GET /characters/
+```
+
+A resposta retornará uma lista de todos os personagens existentes no banco de dados.
+
+### Criar Novo Personagem
+
+Para criar um novo personagem, envie uma solicitação POST para a rota `/characters/` com os detalhes do personagem no corpo da solicitação.
+
+#### Campos Obrigatórios:
+
+- `nome`: Nome do personagem
+- `descricao`: Descrição do personagem
+- `link_imagem`: Link da imagem do personagem
+- `programa`: Programa do personagem
+- `animador`: Animador do personagem
+
+#### Exemplo:
+
+```
+POST /characters/
+
+{
+    "nome": "Nome do Personagem",
+    "descricao": "Descrição do personagem",
+    "link_imagem": "http://example.com/imagem.jpg",
+    "programa": "Programa do Personagem",
+    "animador": "Animador do Personagem"
+}
+```
+
+A resposta retornará os detalhes do novo personagem criado.
+
+---
